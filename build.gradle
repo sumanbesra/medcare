@@ -1,0 +1,62 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.6'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.omnicell'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.projectlombok:lombok'
+	implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+	implementation group: 'javax.mail', name: 'mail', version: '1.4.1'
+	implementation group: 'com.force.api', name: 'force-wsc', version: '41.0.0'
+	implementation group: 'com.force.api', name: 'force-partner-api', version: '41.0.0'
+
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+task stage(dependsOn: ['bootJar'])
+
+tasks.stage.doLast() {
+   delete fileTree(dir: "build/distributions")
+   delete fileTree(dir: "build/assetCompile")
+   delete fileTree(dir: "build/distributions")
+   delete fileTree(dir: "build/libs", exclude: "*.jar") //delete everything except jar file inside build folder
+}
+
+jar { //Don't package test folders and files
+   exclude "test/**"
+   exclude "test/**/**"
+}
+
+build.mustRunAfter clean //First clean then build to avoid cache issues etc
+
+gradle.taskGraph.whenReady {
+   taskGraph ->
+      if (taskGraph.hasTask(stage)) { //Don't run test on heroku
+         test.enabled = false
+      }
+}
+
+bootJar { //Exclude test files when pack boot jar file
+   enabled = true
+   classifier = 'boot'
+   exclude "test/**"
+   exclude "test/**/**"
+}

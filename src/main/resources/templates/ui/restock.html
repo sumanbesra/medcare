@@ -1,0 +1,162 @@
+<html lang="en-US" dir="ltr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="./main_files/styles.73aed0e312984511.css" media="all" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="styles.73aed0e312984511.css">
+  </noscript>
+  <script async="" src="./main_files/pendo-staging.js"></script>
+  <script async="" src="./main_files/pendo.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./script/restockScript.js"></script>
+  <script type="text/javascript" th:src="@{//script/script.js}"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link th:href="@{/styles/css/style.css}" rel="stylesheet" />
+</head>
+
+<body class="mat-app-background mat-typography">
+  <shell-root _nghost-dgt-c53="" ng-version="13.2.2">
+    <shell-navigation-header _ngcontent-dgt-c53="" class="tw-fixed tw-z-250 tw-w-full ng-star-inserted" _nghost-dgt-c51="">
+      <mat-toolbar _ngcontent-dgt-c51="" xmlns="http://www.w3.org/1999/html" class="mat-toolbar oc-header mat-elevation-z1 mat-toolbar-single-row">
+        <div _ngcontent-dgt-c51="" class="tw-mr-2 md:tw-hidden"><button _ngcontent-dgt-c51="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper">
+              <mat-icon _ngcontent-dgt-c51="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">menu</mat-icon>
+            </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button></div>
+          </svg></a><a _ngcontent-dgt-c51="" aria-haspopup="true" mat-button="" class="mat-focus-indicator mat-menu-trigger oc-nav-bar-item identify__global-header-menuitem mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"> Central Pharmacy </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <a _ngcontent-dgt-c51="" aria-haspopup="true" mat-button="" class="mat-focus-indicator mat-menu-trigger oc-nav-bar-item identify__global-header-menuitem mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper">  </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-star-inserted">
+        </mat-menu>
+        <span _ngcontent-dgt-c51="" class="tw-flex-fill tw-flex-auto"></span>
+        <div _ngcontent-dgt-c51="" class="oc-nav-settings-icon"><button _ngcontent-dgt-c51="" aria-haspopup="true" mat-icon-button="" aria-label="Settings Menu" class="mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base"><span class="mat-button-wrapper">
+              <mat-icon _ngcontent-dgt-c51="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">settings</mat-icon>
+            </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
+        </div>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-tns-c44-2 ng-star-inserted">
+        </mat-menu>
+        <div _ngcontent-dgt-c51="" class="oc-nav-menu-icon"><button _ngcontent-dgt-c51="" aria-haspopup="true" mat-icon-button="" aria-label="User Menu" class="mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base"><span class="mat-button-wrapper">
+              <mat-icon _ngcontent-dgt-c51="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">account_circle</mat-icon>
+            </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
+        </div>
+        <mat-menu _ngcontent-dgt-c51="" class="ng-tns-c44-3 ng-star-inserted">
+        </mat-menu>
+      </mat-toolbar>
+    </shell-navigation-header>
+    <div _ngcontent-dgt-c53="" class="oc-shell-content tw-mt-16">
+      <router-outlet _ngcontent-dgt-c53=""></router-outlet>
+      <im-item-master-stock-area-list class="ng-star-inserted">
+        <div class="oc-container-xl-space">
+          <ocp-ui-header-page title="Stock Area Item List">
+            <div class="ocp-ui-header-page tw-flex tw-items-center tw-justify-between tw-py-4">
+              <h1>Medicine Stock Area Item List</h1>
+              <div class="tw-space-x-4"></div>
+            </div>
+          </ocp-ui-header-page>
+          <mat-card class="mat-card mat-focus-indicator" style="padding-top: 1px;padding-bottom: 3px;">
+
+            <!---->
+            <mat-divider role="separator" class="mat-divider mat-divider-horizontal ng-star-inserted" aria-orientation="horizontal"></mat-divider>
+            <!---->
+            <mat-card-content class="mat-card-content tw-mt-8">
+              <div class="card ng-star-inserted">
+                <div class="ng-star-inserted">
+                  <im-ui-cards-definition-view class="ng-star-inserted">
+                    <div class="tw-grid tw-grid-cols-4 tw-gap-4">
+                      <div class="oc-text-body-strong tw-col-span-3">Basic Info</div>
+                      <div class="oc-text-body-strong tw-col-span-1">Control Levels(AII)</div>
+                      <div class="tw-col-span-3 tw-grid tw-grid-cols-1 tw-gap-4 md:tw-grid-cols-3">
+                        <ocp-ui-text-field-label-value label="Item ID">
+                          <div class="tw-space-between-y-2">
+                            <div class="tw-text-surface-contrast-600/70"><span class="mat-tooltip-trigger">Route</span>
+                              <!---->
+                            </div>
+                            <div class="ng-star-inserted">10:30amd 4-8 Restock</div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </ocp-ui-text-field-label-value>
+                        <ocp-ui-text-field-label-value label="Generic Name" class="tw-col-span-2">
+                          <div class="tw-space-between-y-2">
+                            <div class="tw-text-surface-contrast-600/70"><span class="mat-tooltip-trigger">Medicine
+                                Supplier</span>
+                              <!---->
+                            </div>
+                            <div class="ng-star-inserted">UI6WSDRX - 6W Med Stepdown</div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </ocp-ui-text-field-label-value>
+                        <ocp-ui-text-field-label-value label="Trade Name">
+                          <div class="tw-space-between-y-2">
+                            <div class="tw-text-surface-contrast-600/70"><span class="mat-tooltip-trigger">Pharma Tech</span>
+                              <!---->
+                            </div>
+                            <!---->
+                            <div class="ng-star-inserted">TATA Med Check</div>
+                            <!---->
+                          </div>
+                        </ocp-ui-text-field-label-value>
+                        <ocp-ui-text-field-label-value label="Abbr. Name">
+                        </ocp-ui-text-field-label-value>
+
+                      </div>
+                      <div>
+                        <ocp-ui-boolean-field-check value="Preservative Free">
+
+                        </ocp-ui-boolean-field-check>
+                      </div>
+                      <ocp-ui-divider-grid _nghost-ait-c159="">
+                        <mat-divider _ngcontent-ait-c159="" role="separator" class="mat-divider mat-divider-horizontal" aria-orientation="horizontal"></mat-divider>
+                      </ocp-ui-divider-grid>
+
+                    </div>
+                  </im-ui-cards-definition-view>
+                  <!---->
+                </div>
+                <!---->
+                <!---->
+              </div>
+              <!---->
+              <!---->
+            </mat-card-content>
+          </mat-card>
+          <br>
+          <table mat-table="" class="mat-table cdk-table identify__im_table-stockarea-item oc-rows-tall tw-w-full" role="table">
+            <thead role="rowgroup">
+              <tr role="row" mat-header-row="" class="mat-header-row cdk-header-row ng-star-inserted">
+                <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-item_name mat-column-item_name ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Item ID</th>
+                <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-stock_area mat-column-stock_area ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Restock Qty</th>
+                <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-misc1 mat-column-misc1 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">Dispense On</th>
+                <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-misc2 mat-column-misc2 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;">CPM Id</th>
+                <th role="columnheader" mat-header-cell="" class="mat-header-cell cdk-header-cell cdk-column-misc2 mat-column-misc2 ng-star-inserted mat-table-sticky mat-table-sticky-border-elem-top" style="top: 0px; z-index: 100;"></th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup" id="tdata">
+            </tbody>
+            <tfoot role="rowgroup" style="display: none; bottom: 0px; z-index: 10;" class="mat-table-sticky">
+            </tfoot>
+          </table>
+          <br />
+          <center>
+          </center>
+        </div>
+      </im-item-master-stock-area-list>
+    </div>
+  </shell-root>
+  <script src="./main_files/polyfills.b21ee340c976d729.js" type="module"></script>
+  <script src="./main_files/main.3f3684dfd9950d43.js" type="module"></script>
+  <div class="cdk-overlay-container"></div>
+  <div class="cdk-describedby-message-container cdk-visually-hidden" style="visibility: hidden;">
+    <div id="cdk-describedby-message-1">Sort</div>
+  </div>
+  <div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div>
+</body></html>
